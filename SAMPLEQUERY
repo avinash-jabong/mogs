@@ -1,4 +1,4 @@
 node logsParse.js /home/avinash/non404_errors.log
 Filename to be parsed should be complete path
 
-db.getCollection('logs').find({'message.level':'error', 'message.keyword' : {$ne : 'JAVASCRIPT'}})
+db.getCollection('logs').find({'message.level':'error', 'message.content.message.keyword' : {$ne : 'JAVASCRIPT'}})
